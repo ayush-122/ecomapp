@@ -56,19 +56,10 @@ ecommerce-app/
 
 ### 1. Backend Setup
 
-```bash
-# Create backend directory
-mkdir ecommerce-app && cd ecommerce-app
-mkdir backend && cd backend
-
-# Initialize Node.js project
-npm init -y
-
-# Install required dependencies
-npm install express mongoose cors dotenv nodemon
-
-# Create required directories
-mkdir -p src/{controllers,models,routes,config,middleware}
+# Install node js package
+ ```bash
+cd backend
+npm install
 ```
 
 ### 2. Frontend Setup
@@ -77,14 +68,11 @@ mkdir -p src/{controllers,models,routes,config,middleware}
 # Go back to root directory
 cd ..
 
-# Create Next.js frontend with TypeScript and Tailwind
-npx create-next-app@latest frontend --typescript --tailwind --eslint
-
 # Navigate to frontend directory
 cd frontend
 
-# Install additional dependencies
-npm install axios @headlessui/react lucide-react clsx
+# Install dependencies
+npm install
 ```
 
 ### 3. Environment Variables Setup
@@ -92,7 +80,7 @@ npm install axios @headlessui/react lucide-react clsx
 Backend `.env`:
 ```
 PORT=3001
-MONGODB_URI=mongodb://localhost:27017/ecommerce
+MONGODB_URI=mongodb://localhost:27017/ecommerceapp
 NODE_ENV=development
 ```
 
@@ -114,7 +102,7 @@ mongod
 2. Start the backend server:
 ```bash
 cd backend
-npm run dev
+nodemon src/app.js
 ```
 
 3. Start the frontend development server:
